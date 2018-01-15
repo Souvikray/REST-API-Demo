@@ -1,10 +1,10 @@
 from flask import Flask
 from flask_jwt import JWT
 from flask_restful import Api
-from code_flask2.resources.item import Item, ItemList
-from code_flask2.resources.user import UserRegister
-from code_flask2.security import authenticate, identity
-from code_flask2.resources.store import Store, StoreList
+from resources.item import Item, ItemList
+from resources.user import UserRegister
+from security import authenticate, identity
+from resources.store import Store, StoreList
 
 '''
 Token based authentication overview
