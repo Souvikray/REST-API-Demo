@@ -6,4 +6,4 @@ from db import db
 def create_tables():
     db.create_all()
 # enable sqlalchemy to use the flask app
-    db.init_app(app)
+db.init_app(app)
