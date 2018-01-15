@@ -1,6 +1,6 @@
 from werkzeug.security import safe_str_cmp
 
-from code_flask2.models.user import UserModel
+from models.user import UserModel
 
 
 # when the user sends its credentials, it will be checked against the registered users
