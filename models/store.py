@@ -1,4 +1,4 @@
-from code_flask2.db import db
+from db import db
 
 
 class StoreModel(db.Model):
