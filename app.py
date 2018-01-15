@@ -35,10 +35,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = "121efg987"
 # create an API for the Flask app
 api = Api(app)
-# create a database before flask starts accepting requests
-@app.before_first_request
-def create_tables():
-    db.create_all()
 # create a JWT token
 jwt = JWT(app, authenticate, identity)  # /auth
 # make the resource accessible via the api
