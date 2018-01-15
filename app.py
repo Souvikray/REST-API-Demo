@@ -49,7 +49,7 @@ api.add_resource(Store, "/store/<string:name>")
 api.add_resource(StoreList, "/stores")
 
 if __name__ == "__main__":
-    from code_flask2.db import db
+    from db import db
     # enable sqlalchemy to use the flask app
     db.init_app(app)
     app.run(port=5000, debug=True)
