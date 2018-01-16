@@ -3,7 +3,7 @@ Furthermore the app is deployed on Heroku so that anyone can access it.
 
 App Heroku URL: https://stores99restapi.herokuapp.com/
 
-The database support is provided by PostgreSQL and I have used SQLAlchemy to provide an abstraction on the database and handle the database operations using the SQLAlchemy object.Futhermore I have implement JWT so that when the user wants to fetch data about a specific item, they need to have a token to complete the request.It can be added to any operation and I added to one of the operations to test its working.To enhance the performance of the app, I have also enabled uwsgi that interacts with the app and provides additional functionalities like multithreading etc.
+The database support is provided by PostgreSQL and I have used SQLAlchemy to provide an abstraction on the database and handle the database operations using the SQLAlchemy object.Futhermore I have implement JWT so that when the user wants to fetch data about a specific item or all the items, they need to have a token to complete the request.It can be added to any operation and I added to one of the operations to test its working.To enhance the performance of the app, I have also enabled uwsgi that interacts with the app and provides additional functionalities like multithreading etc.
 
 Below is an instruction on how you can interact with the app and perform CRUD operations.
 
@@ -22,7 +22,7 @@ First you need to register to start interacting.To register, add the ```/registe
 You will receive a response like this below
 ![Alt text](https://github.com/Souvikray/REST-API-Demo/blob/master/screenshot2.png?raw=true "Optional Title")
 
-Furthermore you need to get an ```access token``` if you want to view details of individual items.So add the ```/auth``` end point to front of the app URL and perform a ```POST``` request.
+Furthermore you need to get an ```access token``` if you want to view details of items.So add the ```/auth``` end point to front of the app URL and perform a ```POST``` request.
 ![Alt text](https://github.com/Souvikray/REST-API-Demo/blob/master/screenshot3.png?raw=true "Optional Title")
 
 You can even perform a test to check if you indeed receive an ```auth token```.If you do, you will see a ```PASS``` message else you will receive a ```FAIL``` test message.
@@ -55,13 +55,13 @@ You will receive a response like this below
 
 We can similarly add another item say 'Pizza' priced at 12.99
 
-Now you can get a list of all the stores in the database by adding the ```/stores``` end point to front of the app URL and perform a ```GET``` request.Below is the response which gives information of all the stores stored in the database for the specific user.
+Now you can get a list of all the stores in the database by adding the ```/stores``` end point to front of the app URL and perform a ```GET``` request.Note that you need to provide ```auth token``` to access the stores information.Below is the response which gives information of all the stores stored in the database.
 ![Alt text](https://github.com/Souvikray/REST-API-Demo/blob/master/screenshot9.png?raw=true "Optional Title")
 
-You can also view all the items that are stored across multiple stores.Add the ```/items``` end point to front of the app URL and perform a ```GET``` request.
+You can also view all the items that are stored across multiple stores.Add the ```/items``` end point to front of the app URL and perform a ```GET``` request.Note that you need to provide ```auth token``` to access the items information.You will get a response like this below
 ![Alt text](https://github.com/Souvikray/REST-API-Demo/blob/master/screenshot10.png?raw=true "Optional Title")
 
-To view a specific item add the ```/item/<name>``` end point to front of the app URL and perform a ```GET``` request.Say we want to view the information for the item 'burger'.Note that you need to provide ```auth token``` to access a specific item information.You will get a response like this below
+To view a specific item add the ```/item/<name>``` end point to front of the app URL and perform a ```GET``` request.Say we want to view the information for the item 'burger'.Note that you need to provide ```auth token``` to access a specific item information.You will get a response like this below.
 ![Alt text](https://github.com/Souvikray/REST-API-Demo/blob/master/screenshot11.png?raw=true "Optional Title")
 
 You can also delete an item.Add the ```/item/<name>``` end point to front of the app URL and perform a ```DELETE``` request.Say we want to delete an item 'apple'.You wil get a response like this below.
