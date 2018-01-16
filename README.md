@@ -72,7 +72,7 @@ Now you can check if the item has been deleted by simply accessing the ```/items
 
 Similarly you can also delete a store.So all the items in the store will also get deleted.To delete a specific item add the ```/store/<name>``` end point to front of the app URL and perform a ```DELETE``` request.Say we want to delete the store 'Fruits'.
 
-We will get a response like this below that shows the store 'Fruits' and all the items in it has been deleted.
+We will get a response like this below that shows the store 'Fruits' and all the items in it has been indeed deleted.
 ![Alt text](https://github.com/Souvikray/REST-API-Demo/blob/master/screenshot14.png?raw=true "Optional Title")
 
 Now we can check to confirm that the store 'Fruits' has indeed been deleted.Simply access the ```/stores``` end point.Below is the response that shows 'Fruits' store has been deleted.
