@@ -45,7 +45,14 @@ You will receive a response like this below
 
 Similarly you can create another item say 'Apple' and add it to the 'Fruits' store.Let us set the price to 9.99.
 
-Further you can also use the ```PUT``` method to create or modify an existing item.Say we want to change the price of the apple to 7.99.To modify an item, add the ```/item/banana``` end point to front of the app URL and perform a ```PUT``` request containing new 'price' and 'store_id' in JSON format.Below you can see the updated price
+Further you can also use the ```PUT``` method to create or modify an existing item.Say we want to change the price of the apple to 7.99.To modify an item, add the ```/item/banana``` end point to front of the app URL and perform a ```PUT``` request containing new 'price' and 'store_id' in JSON format.
+```
+{
+  "price": 7.99,
+  "store_id": 1
+}
+```
+Below you can see the updated price
 ![Alt text](https://github.com/Souvikray/REST-API-Demo/blob/master/screenshot7.png?raw=true "Optional Title")
 
 Let us create items for the second store 'Food'.Like before to add an item, add the ```/item/<name>``` end point to front of the app URL and perform a ```POST``` request containing 'price' and 'store_id' in JSON format.Let us add an item say 'Burger'.
