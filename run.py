@@ -1,5 +1,6 @@
 from app import app
 from db import db
+from flask import render_template
 
 # enable sqlalchemy to use the flask app
 db.init_app(app)
