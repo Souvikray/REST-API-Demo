@@ -10,4 +10,4 @@ def create_tables():
 
 @app.route("/")
 def home():
-    return "Hello Everyone!"
+    return render_template('welcome.html')
