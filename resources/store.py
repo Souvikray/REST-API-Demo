@@ -24,7 +24,7 @@ class Store(Resource):
         try:
             store.save_to_db()
         except:
-            return {"message": "An error occurred while inserting the item"}, 500
+            return {"message": "An error occurred while inserting the store"}, 500
         return store.json(), 201
 
     def delete(self, name):
@@ -35,11 +35,12 @@ class Store(Resource):
                 item.delete_from_db()
             # finally delete the store
             store.delete_from_db()
-            return {"message": "Item successfully deleted"}
-        return {"message": "No such item found to delete"}
+            return {"message": "Store successfully deleted"}
+        return {"message": "No such store found to delete"}
 
 
 class StoreList(Resource):
+    @jwt_required()
     def get(self):
         return {"stores": [store.json() for store in StoreModel.query.all()]}
         #return {"stores": list(map(lambda x: x.json(), StoreModel.query.all()))}
