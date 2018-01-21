@@ -7,7 +7,7 @@ The database support is provided by PostgreSQL and I have used SQLAlchemy to pro
 
 Below is an instruction on how you can interact with the app and perform CRUD operations.
 
-Note: I have used POSTMAN to test the API endpoints.
+**Note: I have used POSTMAN to test the API endpoints.**
 
 When you visit the App URL, you may see something like this
 ![Alt text](https://github.com/Souvikray/REST-API-Demo/blob/master/screenshot1.png?raw=true "Optional Title")
